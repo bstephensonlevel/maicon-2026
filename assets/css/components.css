@@ -1,0 +1,109 @@
+/* ================================================
+   LEVEL AGENCY — COMPONENTS CSS
+   Button system and reusable UI patterns
+   ================================================ */
+
+/* ---- BASE BUTTON ---- */
+.btn {
+  display:         inline-flex;
+  align-items:     center;
+  justify-content: center;
+  gap:             8px;
+  padding:         14px 28px;
+  border:          1px solid transparent;
+  border-radius:   50px;
+  font-family:     var(--font-display);
+  font-weight:     var(--weight-bold);
+  font-size:       13px;
+  letter-spacing:  0.06em;
+  text-transform:  uppercase;
+  text-decoration: none;
+  cursor:          pointer;
+  transition:      background 0.25s ease, color 0.25s ease,
+                   border-color 0.25s ease, box-shadow 0.25s ease,
+                   transform 0.2s ease;
+  white-space:     nowrap;
+}
+
+.btn:hover,
+.btn:focus-visible {
+  transform: translateY(-2px);
+  outline:   none;
+}
+
+/* ---- SIZES ---- */
+.btn-sm {
+  padding:    10px 20px;
+  font-size:  12px;
+}
+
+.btn-lg {
+  padding:    16px 36px;
+  font-size:  14px;
+  letter-spacing: 0.07em;
+}
+
+/* ---- VARIANTS ---- */
+
+/* Accent — light blue bg, black text (primary CTA on dark) */
+.btn-accent {
+  background: var(--color-accent);
+  color:      var(--color-black);
+  border-color: var(--color-accent);
+}
+.btn-accent:hover,
+.btn-accent:focus-visible {
+  background:   var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  box-shadow:   0 0 20px rgba(134, 213, 244, 0.35);
+}
+
+/* Primary — black bg, white text (CTA on light) */
+.btn-primary {
+  background:  var(--color-black);
+  color:       var(--color-white);
+  border-color: var(--color-black);
+}
+.btn-primary:hover,
+.btn-primary:focus-visible {
+  background:  #222;
+  border-color: #222;
+  box-shadow:  0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Secondary — white bg, black text, black border */
+.btn-secondary {
+  background:   var(--color-white);
+  color:        var(--color-black);
+  border-color: var(--color-black);
+}
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background:  #f5f5f5;
+  box-shadow:  0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Outline (ghost) — transparent bg, white border + text (for dark sections) */
+.btn-outline {
+  background:   transparent;
+  color:        var(--color-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  border-color: var(--color-accent);
+  color:        var(--color-accent);
+  background:   rgba(134, 213, 244, 0.06);
+}
+
+/* Outline Accent — transparent bg, accent border + text (dark sections, secondary action) */
+.btn-outline-accent {
+  background:   transparent;
+  color:        var(--color-accent);
+  border-color: var(--color-accent);
+}
+.btn-outline-accent:hover,
+.btn-outline-accent:focus-visible {
+  background:   rgba(134, 213, 244, 0.1);
+  box-shadow:   0 0 16px rgba(134, 213, 244, 0.2);
+}
