@@ -245,11 +245,21 @@
       pointer-events: none;
     }
 
+    /* Team grid: 2-up on mobile, 3 on top and 2 centered below at full width */
+    .team-grid>.team-bio-card {
+      width: calc((100% - 1.5rem) / 2);
+    }
+
+    @media (min-width: 768px) {
+      .team-grid>.team-bio-card {
+        width: calc((100% - 3rem) / 3);
+      }
+    }
+
     /* Team bio flip cards */
     .team-bio-card {
       perspective: 1000px;
       cursor: pointer;
-      height: 100%;
     }
 
     .team-bio-card-inner {
@@ -841,7 +851,7 @@
       <div class="accent-line accent-line-orange mb-3"></div>
       <h2 class="font-display font-black text-3xl md:text-4xl mb-10">The people behind the performance.</h2>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="team-grid flex flex-wrap justify-center gap-6">
 
         <!-- Howard Diamond -->
         <div class="team-bio-card" onclick="this.classList.toggle('flipped')" title="Click to read bio">
@@ -937,7 +947,7 @@
         <div class="team-bio-card" onclick="this.classList.toggle('flipped')" title="Click to read bio">
           <div class="team-bio-card-inner">
             <div class="team-bio-card-front">
-              <img src="/maicon-2026/assets/allison-kaharick.jpg" alt="Allison Kaharick"
+              <img src="/maicon-2026/assets/allison-kaharick.png" alt="Allison Kaharick"
                 class="w-full aspect-square object-cover rounded-xl mb-3">
               <p class="font-display font-bold text-sm">Allison Kaharick</p>
               <p class="text-gray-500 font-sans text-xs">Senior Events Manager</p>
