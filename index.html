@@ -249,13 +249,24 @@
     .team-bio-card {
       perspective: 1000px;
       cursor: pointer;
+      height: 100%;
     }
 
     .team-bio-card-inner {
       position: relative;
       width: 100%;
+      height: 100%;
       transform-style: preserve-3d;
       transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    /* Equalize card heights: fronts fill the grid row, titles reserve two lines */
+    .team-bio-card-front {
+      height: 100%;
+    }
+
+    .team-bio-card-front p.text-xs {
+      min-height: 2rem;
     }
 
     .team-bio-card.flipped .team-bio-card-inner {
