@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/maicon-2026/:path*",
+            "destination": "/:path*"
+        }
+    ]
+}
